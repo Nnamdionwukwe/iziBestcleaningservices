@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "axios": "^1.9.0",
+    "cors": "^2.8.5",
+    "create-react-app": "^5.1.0",
+    "express": "^5.1.0",
+    "mogodb": "^0.0.1-security",
+    "mongoose": "^8.15.1",
+    "nodemon": "^3.1.10",
+    "react-router-dom": "^7.6.2"
+  }
+}

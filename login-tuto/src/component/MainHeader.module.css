@@ -1,0 +1,22 @@
+@media screen and (min-width: 320px) {
+}
+
+@media screen and (max-width: 992px) {
+  .main2 {
+    display: ;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .header {
+    background-color: green;
+  }
+
+  .main2 {
+    background-color: red;
+  }
+
+  .main {
+    display: ;
+  }
+}
