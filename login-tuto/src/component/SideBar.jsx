@@ -46,7 +46,7 @@ export default function SideBar({ isOpen, setIsOpen }) {
                 className={styles.greater}
                 onClick={() => setIsOpen2((is) => !is)}
               >
-                >
+                &rarow;
               </p>
             </div>
 
