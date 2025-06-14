@@ -18,6 +18,7 @@ export default function SideBar({ isOpen, setIsOpen }) {
           </div>
 
           <div>
+            <div></div>
             <img
               className={styles.logo}
               alt="Logo"
