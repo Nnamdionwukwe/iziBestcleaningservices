@@ -1,4 +1,4 @@
-import styles from "./SideBsr.module.css";
+import styles from "./ResidentialSideBar.module.css";
 
 export default function ResidentialSideBar() {
   return (
@@ -17,7 +17,7 @@ export default function ResidentialSideBar() {
 
           <div className={styles.hoverMainDiv3}>
             <i class="fa fa-th-large" aria-hidden="true"></i>
-            <p>Movin_in Cleaning</p>
+            <p>Move-In Cleaning</p>
           </div>
 
           <div className={styles.hoverMainDiv4}>
