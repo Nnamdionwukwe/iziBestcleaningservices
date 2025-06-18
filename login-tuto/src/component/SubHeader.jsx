@@ -30,7 +30,9 @@ export default function SubHeader() {
               aria-hidden="true"
             ></i>
 
-            {isOpen && <SideBar isOpen={isOpen} setIsOpen={setIsOpen} />}
+            <div classname={styles.sideBarMain}>
+              {isOpen && <SideBar isOpen={isOpen} setIsOpen={setIsOpen} />}
+            </div>
           </div>
         </div>
 
