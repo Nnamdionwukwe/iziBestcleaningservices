@@ -5,6 +5,8 @@ import LightCommercial from "./LightCommercial";
 import LightCommercialSideBar from "./LightCommercialSideBar";
 import WhyHireUsSideBar from "./WhyHireUseSideBar";
 import AboutUsSideBar from "./AboutUsSideBar";
+import CleaningTipsSideBar from "./CleaningTipsSIdeBar";
+import PracticalSideBar from "./PracticalSideBar";
 
 export default function SideBar({ isOpen, setIsOpen }) {
   const [isClose, setIsClose] = useState(false);
@@ -22,7 +24,7 @@ export default function SideBar({ isOpen, setIsOpen }) {
   const [isOpen77, setIsOpen77] = useState(false);
   const [openFAQ1, setOpenFAQ1] = useState(false);
   const [openFAQ, setOpenFAQ] = useState(false);
-  const [iziBest, setIziBest] = useState(false);
+  const [iziBest, setIziBest] = useState(true);
   const [iziBest2, setIziBest2] = useState(false);
   const [isAll, setIsAll] = useState(false);
 
@@ -94,6 +96,8 @@ export default function SideBar({ isOpen, setIsOpen }) {
     setIsOpen7(false);
     setIsAll(true);
     setIsOpenFotter(false);
+    setOpenFAQ(false);
+    setIziBest2(false);
   }
 
   function handleIsOpen6() {
@@ -122,6 +126,18 @@ export default function SideBar({ isOpen, setIsOpen }) {
     setIsOpen7(true);
     setIsOpen77(true);
     setIsOpenFotter(false);
+  }
+
+  function handleFAQ() {
+    setOpenFAQ(true);
+    setIsOpen55(false);
+    setIziBest2(false);
+  }
+
+  function handleIzibest() {
+    setOpenFAQ(false);
+    setIsOpen55(false);
+    setIziBest2(true);
   }
 
   return (
@@ -238,7 +254,7 @@ export default function SideBar({ isOpen, setIsOpen }) {
                         <div className={styles.residentialD}>
                           <div
                             className={styles.resident1234}
-                            onClick={() => setOpenFAQ(true)}
+                            onClick={handleFAQ}
                           >
                             <p>FAQ</p>
                             <p className={styles.greater}>&darr;</p>
@@ -269,51 +285,53 @@ export default function SideBar({ isOpen, setIsOpen }) {
                           </div>
                         </div>
 
-                        <div className={styles.residentiaDI}>
-                          <div
-                            className={styles.resident1234}
-                            onClick={() => setIziBest(true)}
-                          >
-                            <p>IziBest Foundation</p>
-                            <p className={styles.greater}>&darr;</p>
-                          </div>
-
-                          {iziBest && (
-                            <div className={styles.residentialDI}>
-                              <div className={styles.residentialDI23}>
-                                <i
-                                  class="fa fa-th-large"
-                                  aria-hidden="true"
-                                ></i>
-                                <p>Donate</p>
-                              </div>
-
-                              <div className={styles.residentialDI23}>
-                                <i
-                                  class="fa fa-th-large"
-                                  aria-hidden="true"
-                                ></i>
-                                <p>IziBest Awards</p>
-                              </div>
-
-                              <div className={styles.residentialDI23}>
-                                <i
-                                  class="fa fa-th-large"
-                                  aria-hidden="true"
-                                ></i>
-                                <p>Local Shelter/Agency Support</p>
-                              </div>
-
-                              <div className={styles.residentialDI23}>
-                                <i
-                                  class="fa fa-th-large"
-                                  aria-hidden="true"
-                                ></i>
-                                <p>Board of Directors</p>
-                              </div>
+                        {iziBest && (
+                          <div className={styles.residentiaDI}>
+                            <div
+                              className={styles.resident1234}
+                              onClick={handleIzibest}
+                            >
+                              <p>IziBest Foundation</p>
+                              <p className={styles.greater}>&darr;</p>
                             </div>
-                          )}
-                        </div>
+
+                            {iziBest2 && (
+                              <div className={styles.residentialDI}>
+                                <div className={styles.residentialDI23}>
+                                  <i
+                                    class="fa fa-th-large"
+                                    aria-hidden="true"
+                                  ></i>
+                                  <p>Donate</p>
+                                </div>
+
+                                <div className={styles.residentialDI23}>
+                                  <i
+                                    class="fa fa-th-large"
+                                    aria-hidden="true"
+                                  ></i>
+                                  <p>IziBest Awards</p>
+                                </div>
+
+                                <div className={styles.residentialDI23}>
+                                  <i
+                                    class="fa fa-th-large"
+                                    aria-hidden="true"
+                                  ></i>
+                                  <p>Local Shelter/Agency Support</p>
+                                </div>
+
+                                <div className={styles.residentialDI23}>
+                                  <i
+                                    class="fa fa-th-large"
+                                    aria-hidden="true"
+                                  ></i>
+                                  <p>Board of Directors</p>
+                                </div>
+                              </div>
+                            )}
+                          </div>
+                        )}
                       </div>
                     )}
                   </>
@@ -331,7 +349,7 @@ export default function SideBar({ isOpen, setIsOpen }) {
                 <div>
                   {isOpen66 && (
                     <div>
-                      <LightCommercialSideBar />
+                      <CleaningTipsSideBar />
                     </div>
                   )}
                 </div>
@@ -348,7 +366,7 @@ export default function SideBar({ isOpen, setIsOpen }) {
                 <div>
                   {isOpen77 && (
                     <div>
-                      <WhyHireUsSideBar />
+                      <PracticalSideBar />
                     </div>
                   )}
                 </div>
@@ -361,15 +379,20 @@ export default function SideBar({ isOpen, setIsOpen }) {
               <p>Find My Local IziBest Maid</p>
             </div>
 
+            <div className={styles.icons}>
+              <i class="fa fa-facebook-square" aria-hidden="true"></i>
+              <i class="fa fa-youtube-play" aria-hidden="true"></i>
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+              <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </div>
+
             {isOpenFotter && (
-              <div>
+              <div className={styles.giftsDiv}>
                 <p>Gift Certificates</p>
-                <p>Gift Certificates</p>
-                <p>Gift Certificates</p>
-                <p>Gift Certificates</p>
-                <p>Gift Certificates</p>
-                <p>Gift Certificates</p>
-                <p>Gift Certificates</p>
+                <p>Apply Locally</p>
+                <p>Applicar Localmente</p>
+                <p>Own a Franchise</p>
               </div>
             )}
           </div>
