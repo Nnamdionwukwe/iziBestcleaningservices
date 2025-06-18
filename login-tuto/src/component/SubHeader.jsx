@@ -14,6 +14,7 @@ export default function SubHeader() {
   return (
     <>
       <div className={styles.header}>
+        <div></div>
         <div className={styles.SubHeader1}>
           <div>
             <img
