@@ -1,7 +1,6 @@
 import { useState } from "react";
 import styles from "./SideBsr.module.css";
 import ResidentialSideBar from "./ResidentialSideBar";
-import LightCommercial from "./LightCommercial";
 import LightCommercialSideBar from "./LightCommercialSideBar";
 import WhyHireUsSideBar from "./WhyHireUseSideBar";
 import AboutUsSideBar from "./AboutUsSideBar";
@@ -22,7 +21,6 @@ export default function SideBar({ isOpen, setIsOpen }) {
   const [isOpen66, setIsOpen66] = useState(false);
   const [isOpen7, setIsOpen7] = useState(true);
   const [isOpen77, setIsOpen77] = useState(false);
-  const [openFAQ1, setOpenFAQ1] = useState(false);
   const [openFAQ, setOpenFAQ] = useState(false);
   const [iziBest, setIziBest] = useState(true);
   const [iziBest2, setIziBest2] = useState(false);
@@ -380,11 +378,11 @@ export default function SideBar({ isOpen, setIsOpen }) {
             </div>
 
             <div className={styles.icons}>
-              <i class="fa fa-facebook-square" aria-hidden="true"></i>
-              <i class="fa fa-youtube-play" aria-hidden="true"></i>
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-              <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-              <i class="fa fa-twitter" aria-hidden="true"></i>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-x-twitter"></i>
+              <i class="fa-brands fa-youtube"></i>
+              <i class="fa-brands fa-linkedin"></i>
             </div>
 
             {isOpenFotter && (

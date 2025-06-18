@@ -9,14 +9,17 @@
 
 @media screen and (min-width: 992px) {
   .header {
-    background-color: green;
+    background-color: ;
   }
 
   .main2 {
-    background-color: red;
+    background-color: ;
   }
 
   .main {
     display: ;
   }
+}
+
+.main {
 }

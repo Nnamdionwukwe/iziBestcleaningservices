@@ -505,27 +505,18 @@
 .icons i {
   cursor: pointer;
   color: blue;
-  margin-right: 20px;
+  margin-right: 30px;
+  font-size: 25px;
 }
 
 .giftsDiv {
   font-size: 12px;
   font-weight: bold;
   color: gray;
+  margin-bottom: 100px;
 }
 
 .giftsDiv p:hover {
   cursor: pointer;
   color: darkblue;
-}
-
-.giftsDiv p {
-}
-
-.residentialHoverDiv {
-  /* border-radius: 10px; */
-}
-
-.residentialHoverDiv:hover {
-  /* background-color: pink; */
 }
